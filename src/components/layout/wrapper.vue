@@ -30,10 +30,12 @@
         & > .content {
             display: flex;
             flex-flow: row nowrap;
+            max-width: 100vw;
+            overflow-x: hidden;
 
             .content-wrapper {
                 flex: 1 1 auto;
-                padding: 1rem;
+                padding: 1rem 2rem 0 1rem;
             }
         }
     }

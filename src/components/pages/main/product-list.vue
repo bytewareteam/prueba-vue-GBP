@@ -1,5 +1,5 @@
 <template>
-    <div class="products">
+    <div class="products clearfix">
         <Product v-for="p in products" :key="p" :code="p"></Product>
     </div>
 </template>
@@ -20,5 +20,7 @@
         grid-template-columns: repeat(4, 1fr);
         column-gap: 1rem;
         row-gap: 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 </style>

@@ -45,7 +45,6 @@
             </div>
         </div>
         <hr>
-
         <div class="product-footer">
             Gastos 0,00 USD
         </div>
@@ -68,6 +67,10 @@
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
         border-radius: 1rem;
         box-sizing: border-box;
+
+        * {
+            overflow-x: hidden;
+        }
 
         .product-header {
             color: var(--main-color);
@@ -100,7 +103,8 @@
         }
 
         .product-description {
-            padding: 0 .5rem;
+            /*padding: 0 .5rem;*/
+            box-sizing: border-box;
 
             .product-category {
                 text-align: center;

@@ -1,12 +1,10 @@
 <template>
     <div class="main-page">
-        <div class="container-fluid">
-            <TitleBar :title="title" :count="count"></TitleBar>
-            <NavBar :menu="menu"></NavBar>
-            <StatsToolbar :general="stats.general" :probabilities="stats.probabilities"></StatsToolbar>
-            <CategoriesToolbar :categories="categories"></CategoriesToolbar>
-            <ProductList :products="products"></ProductList>
-        </div>
+        <TitleBar :title="title" :count="count"></TitleBar>
+        <NavBar :menu="menu"></NavBar>
+        <StatsToolbar :general="stats.general" :probabilities="stats.probabilities"></StatsToolbar>
+        <CategoriesToolbar :categories="categories"></CategoriesToolbar>
+        <ProductList :products="products"></ProductList>
     </div>
 </template>
 
@@ -19,7 +17,10 @@
 
     export default {
         name: "main-page",
-        components: {NavBar, ProductList, TitleBar, CategoriesToolbar, StatsToolbar},
+        components: {
+            CategoriesToolbar, StatsToolbar, NavBar, TitleBar,
+            ProductList,
+        },
         data: () => {
             return {
                 count: 107,
@@ -61,6 +62,6 @@
 
 <style lang="scss" scoped>
     .main-page {
-
+        overflow-x: hidden;
     }
 </style>
